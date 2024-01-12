@@ -4,24 +4,28 @@ require_once "SplitApplyCombine.php";
 
 error_reporting(E_ERROR);
 
-use Chapter0\SplitApplyCombine;
+use Chapter1\SplitApplyCombine;
 
 $sac = new SplitApplyCombine();
 $out = $sac->execute(
     get_transactional_records(),
-    ['country', 'region'],
+    ['client_code', 'country', 'region'],
     [
         ['count', 'id', 'total_events', []],
         ['sum', 'revenue', 'click_revenue', [['_event', '=', 'click']]],
         ['sum', 'revenue', 'apply_revenue', [['_event', '=', 'apply']]],
     ]
+    , true
+    , "client_code"
 );
 
 pp($out, 1);
 
+
+
 function get_transactional_records() : array
 {
-    return [
+    $data = [
         ["id" => 0, "client_code" => 123, "_event" => "click", "country"=>"us", "revenue" => 100, "region" => "North"],
         ["id" => 1, "client_code" => 123, "_event" => "click", "country"=>"us", "revenue" => 90, "region" => "South"],
         ["id" => 2, "client_code" => 123, "_event" => "click", "country"=>"us", "revenue" => 110, "region" => "South"],
@@ -41,4 +45,8 @@ function get_transactional_records() : array
         ["id" => 13, "client_code" => NULL, "_event" => "click", "country"=>"ca", "revenue" => 520, "region" => "North"],
         ["id" => 14, "client_code" => NULL, "_event" => "click", "country"=>"us", "revenue" => 120, "region" => "North"],
     ];
+    usort($data, function ($x, $y) {
+        return strcmp($x["client_code"], $y["client_code"]);
+    });
+    return $data;
 }
