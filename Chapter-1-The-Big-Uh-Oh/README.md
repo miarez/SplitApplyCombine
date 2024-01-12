@@ -74,7 +74,7 @@ My algorithm wasn't amazingly fast, but it did the job relatively well, that is 
 
 The approach was headed towards disaster. Ingestion scripts ran every hour, and were soon going to take over an hour to run. I was screwed. 
 
-![img.png](img.png)
+![img.png](assets/img.png)
 
 Our senior engineer at the time (and still now) was also a hacky, pragmatic self-taught programmer, albeit one orders of magnitudes smarter and more experienced than myself. 
 
@@ -122,7 +122,7 @@ As always, the head engineers knew that I was a deeply curious learner, and only
 
 If things ever truly hit a dead-end, they would surely step in and professionally rewrite what I messed up. But while I was learning and getting things done in a timely manner, they left me to solve my own issues.
 
-![img_1.png](img_1.png)
+![img_1.png](assets/img_1.png)
 
 And just like that, SplitApplyCombine got a breath of second life. 
 
@@ -134,7 +134,7 @@ This fueled a deep desire to learn more, and to seek harder problems.
 
 Years down the line, while researching extremely advanced modern day database principles I stumbled across this slide in Graduate level database systems course
 
-![img_2.jpg](img_2.jpg)
+![img_2.jpg](assets/img_2.jpg)
 
 Modern day vectorized execution engines use something with a very fancy name called 'Relaxed Operator Fusion', which I noticed eerily resembled the senior engineer's hacky solution.
 
