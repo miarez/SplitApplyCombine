@@ -7,7 +7,7 @@
 - The code is messy, newbie, and should not be used
 
 
-### 0.0 - Smooth Sailing
+### 1.0 - Smooth Sailing
 
 The SplitApplyCombine class sat firmly in production, trucking away, aggregating tens of millions of rows of data a day for a rapidly growing startup.
 
@@ -18,7 +18,7 @@ We also had many, many other things to do, so under a `if it ain't broke don't f
 I had a junior developer on my team by this point, despite being brutally junior myself, but hey, startup vibes, things move fast.The junior took a liking to SplitApplyCombine, which gave me some reassurance that I created something worth keeping around. It aided in Developer Experience, and so it stuck.
 
 
-### 0.1 - Some small hiccups
+### 1.1 - Some small hiccups
 
 Since as a company we were 'faking it till making it', requests for additional data transformations came in frequently. One of the most memorable was adding a DISTINCT COUNT functionality. 
 
@@ -66,7 +66,7 @@ The company was making money hand over first, there were plenty of things to do,
 
 That is, until I began notcing a very big problem.
 
-### 0.2 The Big Uh Oh
+### 1.2 The Big Uh Oh
 
 The developers were killing it, the sales reps were killing it, everyone was making the company grow ... which also meant the amount of transactional records started to grow. 
 
@@ -126,7 +126,7 @@ If things ever truly hit a dead-end, they would surely step in and professionall
 
 And just like that, SplitApplyCombine got a breath of second life. 
 
-### 0.3 - In Retrospect
+### 1.3 - In Retrospect
 
 This was my first ever introduction to algorithms. It was the first time I ever witnessed a change in logic making such a radical impact on performance.
 
@@ -141,7 +141,7 @@ Modern day vectorized execution engines use something with a very fancy name cal
 I texted Daniel and asked if he had known about "Relaxed Operator Fusion" at the time, to which he replied that he simply just made up some shit that seemed to be the way to solve the problem.
 
 
-### Parting Thoughts
+### 1.4 - Parting Thoughts
 
 By this point, SplitApplyCombine was a hit for the data team, but I saw developers from other teams still struggling with dynamic aggregations and nested loops. 
 
